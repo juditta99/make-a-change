@@ -253,6 +253,7 @@ input:focus {
     height: auto;
     font-family:'Nunito', sans-serif;
     font-size: 1em;
+    padding-bottom: 1.5em;
 }
 .who-we-are .overlay p {
     text-align: left;
@@ -265,6 +266,7 @@ input:focus {
 .who-we-are .overlay h3 {
     color: rgba(234, 222, 113);
     text-align: left;
+    font-size: 1.4em;
     padding-left: 1rem;
     margin-bottom: 0;
     margin-top: 3em;
@@ -280,7 +282,99 @@ input:focus {
 }
 
 
+/*NEWS PAGE*/
+.news {
+    background-image: url(https://loremflickr.com/400/1000/leaves);   
+    background-attachment: fixed;
+}
+#news-search {
+    background-color:var(--yellow-color);
+    margin: 0;
+    height: 50px;
+}
+.wrapper-news-item {
+    display: flex;
+    flex-direction: column;
+}
+.news-image-1 {
+    background-image: url(https://loremflickr.com/400/200/jungle);
+    height: 200px;
+}
+.news-image-2 {
+    background-image: url(https://loremflickr.com/400/200/monkey);
+    height: 200px;
+}
+.news-h2 {
+    margin: 0;
+    padding: 1.5rem;
+    color: rgba(65,65,65,1);
+    font-family:'Oswald', sans-serif;
+}
+/*Ellipsis*/
+.news-p {
+    font-size: 1em;
+    color: rgba(65,65,65,1);
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    text-align: justify;
+    padding-left: 1.5em;
+    padding-right: 2em;
+}
+.news-p::before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 1em;
+}
+.news-p::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+}
+/*Social Media*/
+.news-social-media ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+/*Comments*/
+.news-comments {
+    display:flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    border-top: 1px solid  rgba(158, 157, 157,1);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 0.8em;
+}
+.fa-eye {
+    color: rgba(158, 157, 157,1);
+    padding-right: 1em;
+}
+.news-comments p {
+    margin-top: 0;
+    color: rgba(158, 157, 157,1);
+    flex-grow: 2;
+}
+.fa-heart {
+    color: #e84a43;
+}
+
+
+
 /*QUESTIONS:
 why does the overlay not work if the html elements have both the section and the overlay classes: 
-<div class="overlay get-involved">* It only works if I delete the section class*/
+<div class="overlay get-involved">* It only works if I delete the section class
 
+-NEWS: How can I add the search icon inside the search bar?
+       How can I make a line appear when you click on search bar?
+*/
