@@ -21,24 +21,37 @@ header {
     flex-wrap: wrap;
     color: var(--primary-color);
     background-color: var(--secondary-color);
+    
 }
 header>* {
     flex-grow: 1;
 }
+
 .logo {
-    width: 50%;
+    width: 55%;
+    
 }
 .logo p {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family:'Oswald', sans-serif;
     font-size: 1.4rem;
-    font-weight: bolder;
+    font-weight: bold;
     margin-top: 1em;
     margin-bottom: 0;
     text-align: left;
     padding-left: 1rem;
+    text-decoration: none;
+}
+.logo a {
+    text-decoration: none;
+    font-family:'Oswald', sans-serif;
+}
+
+.logo a:visited {
+    color: var(--primary-color);
+    text-decoration: none;
 }
 .wrapper-for-menu {
-    width: 50%;
+    width: 45%;
     text-align: right;
 }
 nav {
@@ -53,16 +66,29 @@ nav {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 10;
+    background-color: var(--primary-color);
+    color: #4D82EF;
 }
 nav li {
     list-style-type: none;
     margin-bottom: 1em;
+}
+nav a {
+    text-decoration: none;
+}
+nav a:focus {
+    color: rgb(234, 222, 113);
+    font-size: 1.2em;
+}
+
+nav a:visited {
+    color: #4D82EF;
+    text-decoration: none;
 }
 .fa-bars {
     padding: 1.5em;  
@@ -73,7 +99,9 @@ nav .menu-hide {
     top: 1em;
     right: 1em;
     margin: 1em;
+    color: rgba(234, 222, 113);
 }
+
 header .btn-donate-now {
     color: var(--primary-color);
     border: 0;
@@ -85,6 +113,9 @@ header .btn-donate-now {
     text-align: left;
     display: flex;
     justify-content: left;
+}
+header .btn-donate-now:focus {
+    outline: none;
 }
 
 /*CALL TO ACTION*/
@@ -280,28 +311,74 @@ input:focus {
     font-family:'Oswald', sans-serif;
     padding-right: 2em; 
 }
-
+/*END OF ABOUT PAGE*/
 
 /*NEWS PAGE*/
-.news {
-    background-image: url(https://loremflickr.com/400/1000/leaves);   
+.news-intro {
+    background-image: url(https://loremflickr.com/500/1000/leaves);   
     background-attachment: fixed;
+    height: 300px;
+}
+.news-intro>.overlay-dark-blue {
+    height: 300px;  
+    text-align: left;
+    padding-left: 1em;   
+}
+.news-intro h3 {
+    color: rgba(234, 222, 113);
+    text-align: left;
+    font-size: 1.4em;
+    font-family:'Oswald', sans-serif;
+    margin-bottom: 1rem;
+}
+.news-intro h1 {
+    font-size: 50px;
+    margin-top: 0;
+    font-family:'Oswald', sans-serif;
+    line-height: 1;
+    width: 60%;
+}
+.wrapper-search-box {
+    background-color:  rgba(234, 222, 113);
 }
 #news-search {
-    background-color:var(--yellow-color);
-    margin: 0;
-    height: 50px;
+    background-color:  rgba(234, 222, 113);
+    margin-left: 1rem;
+    position: relative;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+#news-search::before {
+    content: "\f002";  
+    font-family: "FontAwesome";
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right:10px;
+}
+#news-search:focus {
+    border-bottom: 1px solid rgba(158, 157, 157,1);
+    outline: none;
+    width: 90%;
+    margin-left: 1rem;
+}
+#news-search:focus::placeholder {
+    color:rgba(158, 157, 157,1);
 }
 .wrapper-news-item {
     display: flex;
     flex-direction: column;
 }
 .news-image-1 {
-    background-image: url(https://loremflickr.com/400/200/jungle);
+    background-image: url(https://loremflickr.com/500/200/jungle);
     height: 200px;
 }
 .news-image-2 {
-    background-image: url(https://loremflickr.com/400/200/monkey);
+    background-image: url(https://loremflickr.com/500/200/monkey);
+    height: 200px;
+}
+.news-image-3 {
+    background-image: url(https://loremflickr.com/500/200/iguana);
     height: 200px;
 }
 .news-h2 {
@@ -344,7 +421,6 @@ input:focus {
     flex-direction: row;
     display: none;
 }
-
 /*Comments*/
 .news-comments {
     display:flex;
@@ -368,13 +444,43 @@ input:focus {
 .fa-heart {
     color: #e84a43;
 }
-
+.news-footer-social-media {
+    background-image: url(https://loremflickr.com/400/1000/leaves);   
+    background-attachment: fixed; 
+    width: 100vw;
+    margin-left: -1em;
+    height: 60px;
+}
+.news-footer-social-media>.overlay-dark-blue{
+    background-color: rgba(167,216,162,0.9);
+    height: 60px;
+    text-align: center;
+}
+.news-footer-social-media ul {    
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    padding-left: 0;
+    height: 100%;
+    font-size: 1.5em;
+}
+.news-footer-social-media .fa-facebook-f,
+.news-footer-social-media .fa-twitter,
+.news-footer-social-media .fa-instagram {
+    color: #fff;
+    text-shadow: 2px 2px   rgb(151, 148, 148);
+}
 
 
 /*QUESTIONS:
 why does the overlay not work if the html elements have both the section and the overlay classes: 
 <div class="overlay get-involved">* It only works if I delete the section class
 
--NEWS: How can I add the search icon inside the search bar?
-       How can I make a line appear when you click on search bar?
+-NEWS: Why doesn't the search icon (before) appear?
+
 */
